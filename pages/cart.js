@@ -119,13 +119,14 @@ function Cart() {
                             <span>$ {total()}</span>
                         </div>
                     </div>
-
-                    {Order && CartData.pizzas.length > 0 ? (
-                        <div className={css.buttons}>
-                            <button className='btn' onClick={handleOnDelivery}>Pay on Delivery</button>
-                            <button className='btn' onClick={handleCheckout}>Pay Now</button>
-                        </div>
-                    ) : null}
+                        {!Order && CartData.pizzas.length > 0 ? (
+                             <div className={css.buttons}>
+                                <button className='btn' onClick={handleOnDelivery}>Pay on Delivery</button>
+                                <button className='btn' onClick={handleCheckout}>Pay Now</button>
+                            </div>
+                        ) : null}
+                       
+                    
 
                 </div>
             </div>

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import '../node_modules/font-awesome/css/font-awesome.min.css'
 import Layout from "../components/layout";
 import Hero from "../components/Hero/Hero";
 import css from '../styles/Home.module.css'
@@ -19,7 +18,7 @@ export default function Home(pizzas) {
         {/* body */}
         <main>
           <Hero/>     
-          <Services/>   
+          <Services/>
           <Menu pizzas={pizzas}/>
         </main>
       </div>
